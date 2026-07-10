@@ -9,6 +9,7 @@ import Shi from '../../assets/images/homePage/Shi.png';
 const SuccessSection: React.FC = () => {
     const profileImages = [Kai, Shi, Kai];
 
+    
     return (
         <div className="w-full bg-slate-300/40 py-4 px-4 sm:px-6 lg:px-8 font-sans text-slate-800 antialiased">
             <div className="max-w-7xl mx-auto space-y-6">
