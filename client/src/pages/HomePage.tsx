@@ -113,7 +113,7 @@ const HomePage: React.FC = () => {
 
               {/* Magenta Inline Right Execution Action Trigger */}
               <button className="bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 text-white font-black text-xs md:text-sm px-6 py-2.5 rounded-full hover:opacity-95 transition-all flex items-center gap-1.5 shadow-sm shrink-0 cursor-pointer mr-0.5">
-                <span><Search className="text-white text-slate-900 shrink-0" size={15} strokeWidth={2.5} /> </span> 
+                <span><Search className="text-white text-slate-900 shrink-0" size={15} strokeWidth={2.5} /> </span>
                 Search
               </button>
             </div>
@@ -197,77 +197,77 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* RIGHT PANEL: AI MIGRATION ASSISTANT */}
-<div className="lg:col-span-5 bg-white border border-slate-300/80 rounded-[24px] p-5 shadow-md shadow-slate-300 flex flex-col justify-between min-h-[320px]">
+          <div className="lg:col-span-5 bg-white border border-slate-300/80 rounded-[24px] p-5 shadow-md shadow-slate-300 flex flex-col justify-between min-h-[320px]">
 
-  {/* Header Row matched to Image */}
-  <div className="border-b border-slate-200 pb-3">
-    <div className="flex items-center justify-between">
-      <div>
-        <h3 className="text-base md:text-lg font-extrabold text-[#855B9E] tracking-tight flex items-center gap-1.5">
-          Meow - Your Japan Guide 🐱
-          <span className="text-[#B392CD] text-sm">✨</span>
-        </h3>
-        <p className="text-[11px] text-slate-500 font-bold mt-0.5">Powered by Meow AI & Local Knowledge</p>
-      </div>
-    </div>
-  </div>
+            {/* Header Row matched to Image */}
+            <div className="border-b border-slate-200 pb-3">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-base md:text-lg font-extrabold text-[#855B9E] tracking-tight flex items-center gap-1.5">
+                    Meow - Your Japan Guide 🐱
+                    <span className="text-[#B392CD] text-sm">✨</span>
+                  </h3>
+                  <p className="text-[11px] text-slate-500 font-bold mt-0.5">Powered by Meow AI & Local Knowledge</p>
+                </div>
+              </div>
+            </div>
 
-  {/* Chat Content Stream with Soft Tint Lavender Canvas */}
-  <div className="flex-grow my-3 bg-[#F5F3F8]/70 rounded-2xl p-3 overflow-y-auto no-scrollbar flex flex-col justify-end space-y-3">
-    
-    {/* User Chat Message Bubble */}
-    <div className="flex justify-end">
-      <div className="bg-[#966FB3] text-white text-xs md:text-sm font-bold px-4 py-2 rounded-2xl rounded-tr-none max-w-[95%] shadow-sm">
-        How can I move to Japan?
-      </div>
-    </div>
+            {/* Chat Content Stream with Soft Tint Lavender Canvas */}
+            <div className="flex-grow my-3 bg-[#F5F3F8]/70 rounded-2xl p-3 overflow-y-auto no-scrollbar flex flex-col justify-end space-y-3">
 
-    {/* Character Illustration & Response Layout Side-by-Side */}
-    <div className="flex items-end gap-1 relative pt-[-10]">
-      {/* Waving Meow Character Asset */}
-      <div className="w-[20%] shrink-0 select-none pointer-events-none">
-        <img
-          src={Meow}
-          alt="Meow AI Cat Assistant Illustration"
-          className="w-full h-auto object-contain transform translate-y-1"
-        />
-      </div>
+              {/* User Chat Message Bubble */}
+              <div className="flex justify-end">
+                <div className="bg-[#966FB3] text-white text-xs md:text-sm font-bold px-4 py-2 rounded-2xl rounded-tr-none max-w-[95%] shadow-sm">
+                  How can I move to Japan?
+                </div>
+              </div>
 
-      {/* Meow Speech Bubble with Premium Soft Purple Outline shadow */}
-      <div className="bg-white border border-[#E6E1ED] shadow-[0_4px_16px_rgba(150,111,179,0.12)] rounded-2xl rounded-bl-none p-3 text-[11px] md:text-xs text-slate-800 font-bold leading-relaxed relative">
-        <p className="mb-1">
-          Meow! Hi, I'm Meow. I'm based on Japan's luckiest maneki-neko! I can help you with visas, schools, jobs, housing, and move to Japan's priority?
-        </p>
-        <span className="text-slate-400 block text-right text-[10px]">🐾</span>
-      </div>
-    </div>
+              {/* Character Illustration & Response Layout Side-by-Side */}
+              <div className="flex items-end gap-1 relative pt-[-10]">
+                {/* Waving Meow Character Asset */}
+                <div className="w-[20%] shrink-0 select-none pointer-events-none">
+                  <img
+                    src={Meow}
+                    alt="Meow AI Cat Assistant Illustration"
+                    className="w-full h-auto object-contain transform translate-y-1"
+                  />
+                </div>
 
-  </div>
+                {/* Meow Speech Bubble with Premium Soft Purple Outline shadow */}
+                <div className="bg-white border border-[#E6E1ED] shadow-[0_4px_16px_rgba(150,111,179,0.12)] rounded-2xl rounded-bl-none p-3 text-[11px] md:text-xs text-slate-800 font-bold leading-relaxed relative">
+                  <p className="mb-1">
+                    Meow! Hi, I'm Meow. I'm based on Japan's luckiest maneki-neko! I can help you with visas, schools, jobs, housing, and move to Japan's priority?
+                  </p>
+                  <span className="text-slate-400 block text-right text-[10px]">🐾</span>
+                </div>
+              </div>
 
-  {/* Action Bottom Chat Bar Input Field */}
-  <div className="pt-1">
-    <div className="bg-white border border-slate-400 rounded-full p-1 pl-4 flex items-center gap-2 focus-within:border-[#966FB3]/60 focus-within:ring-2 focus-within:ring-[#966FB3]/10 transition-all shadow-sm">
-      <input
-        type="text"
-        placeholder="Ask anything..."
-        value={chatInput}
-        onChange={(e) => setChatInput(e.target.value)}
-        className="w-full bg-transparent border-none outline-none text-xs md:text-sm text-slate-700 placeholder-slate-400 font-medium"
-      />
-      
-      {/* Action Tray Indicator Node Elements */}
-      <div className="flex items-center gap-2 pr-1 shrink-0">
-        <span className="text-slate-300 text-sm select-none">🐾</span>
-        
-        {/* Vibrant Matching Purple-Pink Radial Gradient Action Button */}
-        <button className="bg-gradient-to-r from-[#D434B1] to-[#9C27B0] text-white p-2 rounded-full hover:opacity-95 shadow-sm transition-opacity flex items-center justify-center cursor-pointer">
-          <Send size={13} strokeWidth={2.5} className="transform translate-x-[0.5px] -translate-y-[0.5px]" />
-        </button>
-      </div>
-    </div>
-  </div>
+            </div>
 
-</div>
+            {/* Action Bottom Chat Bar Input Field */}
+            <div className="pt-1">
+              <div className="bg-white border border-slate-400 rounded-full p-1 pl-4 flex items-center gap-2 focus-within:border-[#966FB3]/60 focus-within:ring-2 focus-within:ring-[#966FB3]/10 transition-all shadow-sm">
+                <input
+                  type="text"
+                  placeholder="Ask anything..."
+                  value={chatInput}
+                  onChange={(e) => setChatInput(e.target.value)}
+                  className="w-full bg-transparent border-none outline-none text-xs md:text-sm text-slate-700 placeholder-slate-400 font-medium"
+                />
+
+                {/* Action Tray Indicator Node Elements */}
+                <div className="flex items-center gap-2 pr-1 shrink-0">
+                  <span className="text-slate-300 text-sm select-none">🐾</span>
+
+                  {/* Vibrant Matching Purple-Pink Radial Gradient Action Button */}
+                  <button className="bg-gradient-to-r from-[#D434B1] to-[#9C27B0] text-white p-2 rounded-full hover:opacity-95 shadow-sm transition-opacity flex items-center justify-center cursor-pointer">
+                    <Send size={13} strokeWidth={2.5} className="transform translate-x-[0.5px] -translate-y-[0.5px]" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         {/* BOTTOM SECTION: PLATFORM DESCRIPTION & METRICS INFOGRAPHIC */}
@@ -468,11 +468,11 @@ const HomePage: React.FC = () => {
           </div>
 
         </div>
-      <BottomeSection/>
-      <SuccessSection/>
+        <BottomeSection />
+        <SuccessSection />
       </div>
     </div>
-  );  
+  );
 };
 
 export default HomePage;
