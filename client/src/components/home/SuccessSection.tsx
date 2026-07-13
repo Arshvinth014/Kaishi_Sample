@@ -141,7 +141,7 @@ const SuccessSection: React.FC = () => {
                 <div className="relative w-full min-h-[220px] flex flex-col justify-between font-sans antialiased overflow-visible">
 
                     {/* BACKGROUND GRAPHIC ASSETS LAYERS (Positioned behind content) */}
-                    <div className="absolute left-[-40px] bottom-5 w-60 md:w-52 pointer-events-none z-0 select-none opacity-90">
+                    <div className="absolute left-[-40px] bottom-1 w-60 md:w-52 pointer-events-none z-0 select-none opacity-90">
                         <img
                             src={FlowerFall}
                             alt="Left Decorative Background Accent"
@@ -154,7 +154,7 @@ const SuccessSection: React.FC = () => {
                     </div>
 
                     {/* Right Corner Background Asset Slot */}
-                    <div className="absolute right-[-50px] top-0 bottom-5 w-44 md:w-95 pointer-events-none z-0 select-none opacity-90">
+                    <div className="absolute right-[-30px] top-0 bottom-2 w-44 md:w-100 pointer-events-none z-0 select-none opacity-90">
                         <img
                             src={Building}
                             alt="Right Decorative Background Accent"
