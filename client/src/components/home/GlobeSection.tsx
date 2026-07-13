@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Globe2, Layers, MapPin, Sparkles } from 'lucide-react';
 import InteractiveWorldGlobe from './InteractiveGlobe';
 
 const GlobalServicesGlobeSection: React.FC = () => {
