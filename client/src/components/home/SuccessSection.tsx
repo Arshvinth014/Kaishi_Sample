@@ -11,8 +11,8 @@ const SuccessSection: React.FC = () => {
 
 
     return (
-        <div className="w-full bg-slate-300/40 py-4 px-4 sm:px-6 lg:px-8 font-sans text-slate-800 antialiased">
-            <div className="max-w-7xl mx-auto space-y-6">
+        <div className="w-full bg-slate-50/40 py-4 px-4 sm:px-6 lg:px-8 font-sans text-slate-800 antialiased">
+            <div className="max-w-8xl mx-auto space-y-6">
 
                 {/* TOP ROW: SIDE-BY-SIDE PANELS (Success Stories + User Video Reviews) */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">

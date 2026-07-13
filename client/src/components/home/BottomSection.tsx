@@ -8,7 +8,7 @@ import School from '../../assets/images/homePage/School.png';
 const BottomSection: React.FC = () => {
     return (
         <div className="w-full bg-slate-50/40 py-1 px-4 sm:px-6 lg:px-8 font-sans antialiased text-slate-800">
-            <div className="max-w-7xl mx-auto space-y-8">
+            <div className="max-w-8xl mx-auto space-y-8">
 
                 {/* EXPLORE TOP DESTINATIONS SECTION */}
                 <div className="p-[1px] bg-gradient-to-r from-purple-400/30 via-pink-400/30 to-blue-400/30 rounded-3xl shadow-md shadow-slate-100/80">

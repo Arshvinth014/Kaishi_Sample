@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
         <section className="w-full py-3 px-4 md:px-8 relative overflow-hidden flex items-center justify-center min-h-[320px]">
 
           {/* LEFT SIDE*/}
-          <div className="absolute left-[-10px] bottom-12 top-0 w-[15%] max-w-[210px] hidden md:block pointer-events-none z-10 select-none">
+          <div className="absolute left-[25px] bottom-12 top-0 w-[15%] max-w-[210px] hidden md:block pointer-events-none z-10 select-none">
             <img
               src={Fish}
               alt="Japanese Koi Fish Illustration"
@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* RIGHT SIDE ARTWORK GRAPHIc*/}
-          <div className="absolute right-[-50px] bottom-15 top-3 w-[55%] max-w-[400px] hidden md:block pointer-events-none z-10 select-none">
+          <div className="absolute right-[5px] bottom-15 top-3 w-[55%] max-w-[400px] hidden md:block pointer-events-none z-10 select-none">
             <img
               src={Mountain}
               alt="Mount Fuji Neon Landscape Wireframe"
