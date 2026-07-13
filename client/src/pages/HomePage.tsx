@@ -8,7 +8,6 @@ import Fish from '../assets/images/homePage/Fish_Light.png';
 import Mountain from '../assets/images/homePage/Mountain_Light.png';
 import KaiShi from '../assets/images/homePage/Characters.png';
 import Profile from '../assets/images/homePage/Profile.png';
-import Globe from '../assets/images/homePage/Globe_Light.png';
 import FlowerBranch from '../assets/images/homePage/Flowers_Light.png';
 import JapanMap from '../assets/images/homePage/Map_Light.png';
 
@@ -21,6 +20,7 @@ import {
   Briefcase,
   FileCheck
 } from 'lucide-react';
+import GlobeSection from '../components/home/GlobeSection';
 
 const HomePage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('flights');
@@ -266,12 +266,8 @@ const HomePage: React.FC = () => {
             {/* Left Side Content Area: Globe & Core Platform Intros */}
             <div className="flex items-center gap-5 max-w-xl z-10">
               {/* Globe Image Slot Shell */}
-              <div className="w-20 h-20 md:w-40 md:h-40 shrink-0 rounded-full bg-indigo-50/60 flex items-center justify-center p-1 border border-indigo-100 shadow-sm">
-                <img
-                  src={Globe}
-                  alt="Futuristic Holographic Globe"
-                  className="w-full h-full object-contain animate-spin-slow"
-                />
+              <div className="w-20 h-20 md:w-70 md:h-70 shrink-0 rounded-full bg-indigo-50/60 flex items-center justify-center p-1 border border-indigo-100 shadow-sm">
+                <GlobeSection />
               </div>
 
               {/* Main Titles Descriptor */}
@@ -312,7 +308,7 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* Absolute Floating Right Decorative Asset Slot */}
-            <div className="absolute right-0 top-0 bottom-0 w-150 md:w-150 pointer-events-none z-0 select-none opacity-90">
+            <div className="absolute right-0 top-0 bottom-0 w-150 md:w-220 pointer-events-none z-0 select-none opacity-90">
               <img
                 src={FlowerBranch}
                 alt="Sakura Branch Decoration Accent"
