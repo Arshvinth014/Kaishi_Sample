@@ -10,6 +10,7 @@ import KaiShi from '../assets/images/homePage/Characters.png';
 import Profile from '../assets/images/homePage/Profile.png';
 import FlowerBranch from '../assets/images/homePage/Flowers_Light.png';
 import JapanMap from '../assets/images/homePage/Map_Light.png';
+import Meow from '../assets/images/homePage/Meow.png';
 
 
 import {
@@ -157,12 +158,12 @@ const HomePage: React.FC = () => {
 
               {/* Profile Card & Action Button Area */}
               <div className="md:col-span-5 flex flex-col justify-between space-y-4">
-                <div className="bg-slate-200 border border-slate-300 p-4 rounded-2xl h-full flex flex-col justify-center shadow-sm">
+                <div className="bg-slate-100 border border-slate-300 p-4 rounded-2xl h-full flex flex-col justify-center shadow-sm">
                   <div className="flex items-center gap-3 mb-3">
                     <img
                       src={Profile}
                       alt="Kai Profile"
-                      className="w-12 h-12 rounded-xl object-cover border border-slate-300 shadow-sm shrink-0"
+                      className="w-20 h-20 rounded-xl object-cover border border-slate-300 shadow-sm shrink-0"
                     />
                     <div>
                       <h4 className="text-sm md:text-base font-extrabold text-slate-900 leading-tight">Kai</h4>
@@ -171,7 +172,7 @@ const HomePage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  <p className="text-xs text-slate-600 leading-relaxed font-semibold">
+                  <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-bold">
                     Expert in Visas, Jobs, Schools and everything migration.
                   </p>
                 </div>
@@ -196,72 +197,84 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* RIGHT PANEL: AI MIGRATION ASSISTANT */}
-          <div className="lg:col-span-5 bg-white border border-slate-300/80 rounded-[24px] p-5 shadow-md shadow-slate-300 flex flex-col justify-between min-h-[320px]">
+<div className="lg:col-span-5 bg-white border border-slate-300/80 rounded-[24px] p-5 shadow-md shadow-slate-300 flex flex-col justify-between min-h-[320px]">
 
-            {/* Header Row */}
-            <div className="border-b border-slate-300 pb-3">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-sm md:text-base font-black text-slate-900 tracking-tight flex items-center gap-1.5">
-                    AI Migration Assistant
-                    <Sparkles size={14} className="text-pink-500" />
-                  </h3>
-                  <p className="text-[10px] md:text-xs text-slate-400 font-bold mt-0.5">Powered by Advanced AI</p>
-                </div>
-              </div>
-            </div>
+  {/* Header Row matched to Image */}
+  <div className="border-b border-slate-200 pb-3">
+    <div className="flex items-center justify-between">
+      <div>
+        <h3 className="text-base md:text-lg font-extrabold text-[#855B9E] tracking-tight flex items-center gap-1.5">
+          Meow - Your Japan Guide 🐱
+          <span className="text-[#B392CD] text-sm">✨</span>
+        </h3>
+        <p className="text-[11px] text-slate-500 font-bold mt-0.5">Powered by Meow AI & Local Knowledge</p>
+      </div>
+    </div>
+  </div>
 
-            {/* Chat Content Stream */}
-            <div className="flex-grow space-y-4 my-4 overflow-y-auto pr-1 no-scrollbar flex flex-col justify-end">
+  {/* Chat Content Stream with Soft Tint Lavender Canvas */}
+  <div className="flex-grow my-3 bg-[#F5F3F8]/70 rounded-2xl p-3 overflow-y-auto no-scrollbar flex flex-col justify-end space-y-3">
+    
+    {/* User Chat Message Bubble */}
+    <div className="flex justify-end">
+      <div className="bg-[#966FB3] text-white text-xs md:text-sm font-bold px-4 py-2 rounded-2xl rounded-tr-none max-w-[95%] shadow-sm">
+        How can I move to Japan?
+      </div>
+    </div>
 
-              {/* User Chat Message Bubble */}
-              <div className="flex justify-end">
-                <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-100/60 text-purple-950 text-xs md:text-sm font-semibold px-4 py-2.5 rounded-2xl rounded-tr-none max-w-[85%] shadow-sm">
-                  How can I move to Japan?
-                </div>
-              </div>
+    {/* Character Illustration & Response Layout Side-by-Side */}
+    <div className="flex items-end gap-1 relative pt-[-10]">
+      {/* Waving Meow Character Asset */}
+      <div className="w-[20%] shrink-0 select-none pointer-events-none">
+        <img
+          src={Meow}
+          alt="Meow AI Cat Assistant Illustration"
+          className="w-full h-auto object-contain transform translate-y-1"
+        />
+      </div>
 
-              {/* Assistant Response Layout Row */}
-              <div className="flex items-start gap-3">
-                <div className="flex flex-col items-center shrink-0">
-                  <img
-                    src={Profile}
-                    alt="Shi Profile"
-                    className="w-8 h-8 rounded-full object-cover border border-slate-300 shadow-sm"
-                  />
-                  <span className="text-[10px] font-bold text-slate-400 mt-1">Shi</span>
-                </div>
-                <div className="bg-slate-200 text-slate-700 text-xs md:text-sm font-medium px-4 py-2.5 rounded-2xl rounded-tl-none border border-slate-300 leading-relaxed max-w-[82%] shadow-sm">
-                  Hi! I'm Kai AI 🤖 I can help you with visas, schools, jobs, housing, and everything you need to move to Japan.
-                </div>
-              </div>
-            </div>
+      {/* Meow Speech Bubble with Premium Soft Purple Outline shadow */}
+      <div className="bg-white border border-[#E6E1ED] shadow-[0_4px_16px_rgba(150,111,179,0.12)] rounded-2xl rounded-bl-none p-3 text-[11px] md:text-xs text-slate-800 font-bold leading-relaxed relative">
+        <p className="mb-1">
+          Meow! Hi, I'm Meow. I'm based on Japan's luckiest maneki-neko! I can help you with visas, schools, jobs, housing, and move to Japan's priority?
+        </p>
+        <span className="text-slate-400 block text-right text-[10px]">🐾</span>
+      </div>
+    </div>
 
-            {/* Action Bottom Chat Bar Input Field */}
-            <div className="pt-1">
-              <div className="bg-slate-200 border border-slate-300/80 rounded-full p-1 pl-4 flex items-center gap-2 focus-within:ring-2 focus-within:ring-purple-400/20 transition-all shadow-inner">
-                <input
-                  type="text"
-                  placeholder="Ask anything..."
-                  value={chatInput}
-                  onChange={(e) => setChatInput(e.target.value)}
-                  className="w-full bg-transparent border-none outline-none text-xs md:text-sm text-slate-800 placeholder-slate-400 font-semibold"
-                />
-                <button className="bg-gradient-to-r from-pink-500 to-purple-500 text-white p-2.5 rounded-full hover:opacity-90 shadow-sm shrink-0 cursor-pointer">
-                  <Send size={13} strokeWidth={2.5} />
-                </button>
-              </div>
-            </div>
+  </div>
 
-          </div>
+  {/* Action Bottom Chat Bar Input Field */}
+  <div className="pt-1">
+    <div className="bg-white border border-slate-400 rounded-full p-1 pl-4 flex items-center gap-2 focus-within:border-[#966FB3]/60 focus-within:ring-2 focus-within:ring-[#966FB3]/10 transition-all shadow-sm">
+      <input
+        type="text"
+        placeholder="Ask anything..."
+        value={chatInput}
+        onChange={(e) => setChatInput(e.target.value)}
+        className="w-full bg-transparent border-none outline-none text-xs md:text-sm text-slate-700 placeholder-slate-400 font-medium"
+      />
+      
+      {/* Action Tray Indicator Node Elements */}
+      <div className="flex items-center gap-2 pr-1 shrink-0">
+        <span className="text-slate-300 text-sm select-none">🐾</span>
+        
+        {/* Vibrant Matching Purple-Pink Radial Gradient Action Button */}
+        <button className="bg-gradient-to-r from-[#D434B1] to-[#9C27B0] text-white p-2 rounded-full hover:opacity-95 shadow-sm transition-opacity flex items-center justify-center cursor-pointer">
+          <Send size={13} strokeWidth={2.5} className="transform translate-x-[0.5px] -translate-y-[0.5px]" />
+        </button>
+      </div>
+    </div>
+  </div>
 
+</div>
         </div>
 
         {/* BOTTOM SECTION: PLATFORM DESCRIPTION & METRICS INFOGRAPHIC */}
         <div className="w-full bg-slate-50 p-6 rounded-3xl space-y-6 font-sans text-slate-800 antialiased selection:bg-indigo-100">
 
           {/* TOP HEADER HERO BANNER SECTION*/}
-          <div className="w-full bg-white border border-slate-300/80 rounded-2xl p-6 relative overflow-hidden shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4 min-h-[160px]">
+          <div className="w-full bg-white border border-slate-300/80 rounded-2xl p-2 relative overflow-hidden shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4 min-h-[160px]">
 
             {/* Left Side Content Area: Globe & Core Platform Intros */}
             <div className="flex items-center gap-5 max-w-xl z-10">
@@ -271,7 +284,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Main Titles Descriptor */}
-              <div className="space-y-1">
+              <div className="space-y-6">
                 <h2 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight">
                   What is <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Kaishi Nihon?</span>
                 </h2>
@@ -279,7 +292,7 @@ const HomePage: React.FC = () => {
                   Revolutionary Japan Migration Platform
                 </p>
                 <p className="text-xs md:text-sm text-slate-500 font-medium leading-relaxed max-w-md">
-                  A one-stop platform that connects you to every <br />service you need to study, work, live, and thrive in Japan.
+                  A one-stop platform that connects you to every service you need to study, work, live, and thrive in Japan.
                 </p>
                 <button className="text-xs font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-1 cursor-pointer pt-1">
                   Learn More <span className="text-[10px]">➔</span>
