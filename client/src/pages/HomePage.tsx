@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Send, Sparkles, MessageSquare } from 'lucide-react';
+import { Search, Send, MessageSquare } from 'lucide-react';
 import { MOCK_TABS, POPULAR_SEARCHES, STATS_ITEMS, WHY_CHOOSE_POINTS } from '../mockdata/HomePage';
 import HeroSection from '../components/home/HeroSection';
 import BottomeSection from '../components/home/BottomSection';
