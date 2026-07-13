@@ -119,7 +119,7 @@ const BottomSection: React.FC = () => {
                             </div>
 
                             {/* Mascot Character Image Overlay (Kai & Shi) */}
-                            <div className="absolute bottom-[-310px] right-[-50px] z-30 pointer-events-none hidden sm:block w-[70px] h-[100px] xl:w-90 xl:h-110">
+                            <div className="absolute bottom-[-310px] right-[-33px] z-30 pointer-events-none hidden sm:block w-[80px] h-[100px] xl:w-85 xl:h-120">
                                 <img
                                     src={CharacterImage}
                                     alt="Kai and Shi Characters"
