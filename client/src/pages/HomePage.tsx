@@ -400,98 +400,154 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* RIGHT COLUMN PANEL: LIVE JAPAN REALTIME INSIGHTS */}
-            <div className="lg:col-span-8 bg-white border border-slate-300/80 rounded-2xl p-5 shadow-sm flex flex-col justify-between space-y-4">
+            <div className="lg:col-span-8 bg-white border border-slate-300/80 rounded-2xl p-4 sm:p-5 shadow-sm flex flex-col justify-between space-y-5">
 
               {/* Header Component Live Status Bar */}
               <div className="flex items-center gap-2 border-b border-slate-300 pb-3">
-                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                <h3 className="text-sm md:text-base font-black text-slate-900 tracking-tight">
+                <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
+                <h3 className="text-base md:text-lg font-black text-slate-900 tracking-tight">
                   Live <span className="text-slate-500 font-bold">Japan Insights</span>
                 </h3>
               </div>
 
               {/* Horizontal Grid Array of Metric Insight Sub-Cards */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-3.5 items-stretch h-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 
                 {/* SUB-CARD 1: TOKYO WEATHER */}
-                <div className="bg-slate-200/50 border border-slate-300/40 rounded-xl p-3.5 flex flex-col justify-between relative shadow-inner overflow-hidden min-h-[135px]">
-                  <div className="space-y-1">
-                    <p className="text-[14px] font-bold text-slate-400">Weather in Tokyo</p>
-                    <p className="text-xl font-black text-slate-900">24°C</p>
-                    <p className="text-[10px] font-bold text-emerald-600">Sunny</p>
-                  </div>
-                  <button className="text-[14px] font-bold text-indigo-600 hover:underline pt-8 text-left cursor-pointer mt-auto">
-                    View More
-                  </button>
-                  <div className="absolute right-6 bottom-20 text-amber-1000 opacity-100">
-                    <CloudSun size={60} strokeWidth={1.5} />
-                  </div>
+                <div className="bg-slate-100 border border-slate-200 rounded-xl p-4 flex flex-col justify-between relative shadow-sm min-h-[180px]">
 
-                </div>
+                  <div>
+                    <p className="text-sm font-bold text-slate-500">
+                      Weather in Tokyo
+                    </p>
 
-                {/* SUB-CARD 2: FOREX EXCHANGE RATES */}
-                <div className="bg-slate-200/50 border border-slate-300/40 rounded-xl p-3.5 flex flex-col justify-between relative shadow-inner min-h-[135px]">
-                  <div className="space-y-1">
-                    <p className="text-[14px] font-bold text-slate-400">USD / JPY</p>
-                    <p className="text-lg font-black text-slate-900 tracking-tight">¥156.24</p>
-                    <p className="text-[14px] font-bold text-emerald-600 absolute right-6 bottom-20 text-amber-1000 opacity-100">
-                      <TrendingUp size={40} /> +0.43%
+                    <p className="mt-2 text-3xl font-black text-slate-900">
+                      24°C
+                    </p>
+
+                    <p className="mt-1 text-sm font-bold text-emerald-600">
+                      Sunny
                     </p>
                   </div>
-                  <button className="text-[14px] font-bold text-indigo-600 hover:underline pt-4 text-left cursor-pointer mt-auto">
+
+                  <div className="absolute top-35 right-4 text-amber-500 opacity-90">
+                    <CloudSun size={48} strokeWidth={1.6} />
+                  </div>
+
+                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left">
                     View More
                   </button>
+
                 </div>
 
-                {/* SUB-CARD 3: FLIGHT DEALS META */}
-                <div className="bg-slate-200/50 border border-slate-300/40 rounded-xl p-3.5 flex flex-col justify-between relative shadow-inner min-h-[135px]">
-                  <div className="space-y-1">
-                    <p className="text-[14px] font-bold text-slate-400">Flight Deals</p>
-                    <p className="text-lg font-black text-slate-900">From $680</p>
-                    <p className="text-[10px] font-semibold text-slate-500 whitespace-nowrap">NYC ⇄ Tokyo</p>
+                {/* SUB-CARD 2: FOREX */}
+                <div className="bg-slate-100 border border-slate-200 rounded-xl p-4 flex flex-col justify-between relative shadow-sm min-h-[180px]">
+
+                  <div>
+                    <p className="text-sm font-bold text-slate-500">
+                      USD / JPY
+                    </p>
+
+                    <p className="mt-2 text-2xl font-black text-slate-900">
+                      ¥156.24
+                    </p>
+
+                    <div className="flex items-center gap-1 mt-2 text-emerald-600 font-bold text-sm">
+                      <TrendingUp size={18} />
+                      +0.43%
+                    </div>
                   </div>
-                  <div className="absolute right-6 bottom-20 text-indigo-900 opacity-95">
-                    <PlaneTakeoff size={50} />
-                  </div>
-                  <button className="text-[14px] font-bold text-indigo-600 hover:underline pt-4 text-left cursor-pointer mt-auto">
+
+                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left">
                     View More
                   </button>
+
                 </div>
 
-                {/* SUB-CARD 4: AVAILABILITY INDEX JOBS */}
-                <div className="bg-slate-200/50 border border-slate-300/40 rounded-xl p-3.5 flex flex-col justify-between relative shadow-inner min-h-[135px]">
-                  <div className="space-y-1">
-                    <p className="text-[14px] font-bold text-slate-400">Job Openings</p>
-                    <p className="text-xl font-black text-slate-900">1,250+</p>
-                    <p className="text-[10px] font-bold text-purple-600">Active listings</p>
+                {/* SUB-CARD 3: FLIGHTS */}
+                <div className="bg-slate-100 border border-slate-200 rounded-xl p-4 flex flex-col justify-between relative shadow-sm min-h-[180px]">
+
+                  <div>
+                    <p className="text-sm font-bold text-slate-500">
+                      Flight Deals
+                    </p>
+
+                    <p className="mt-2 text-2xl font-black text-slate-900">
+                      From $680
+                    </p>
+
+                    <p className="mt-1 text-sm text-slate-500">
+                      NYC ⇄ Tokyo
+                    </p>
                   </div>
-                  <div className="absolute right-6 bottom-20 text-purple-600 opacity-95">
-                    <Briefcase size={50} />
+
+                  <div className="absolute top-35 right-4 text-indigo-600">
+                    <PlaneTakeoff size={42} />
                   </div>
-                  <button className="text-[14px] font-bold text-indigo-600 hover:underline pt-4 text-left cursor-pointer mt-auto">
+
+                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left">
                     View More
                   </button>
+
                 </div>
 
-                {/* SUB-CARD 5: VISA METRICS */}
-                <div className="bg-slate-200/50 border border-slate-300/40 rounded-xl p-3.5 flex flex-col justify-between col-span-2 md:col-span-1 relative shadow-inner min-h-[135px]">
-                  <div className="space-y-1">
-                    <p className="text-[14px] font-bold text-slate-400">Visa Processing</p>
-                    <p className="text-xl font-black text-slate-900">75%</p>
-                    <p className="text-[9px] font-semibold text-slate-500 leading-tight">Estimated 5-7 days</p>
+                {/* SUB-CARD 4: JOBS */}
+                <div className="bg-slate-100 border border-slate-200 rounded-xl p-4 flex flex-col justify-between relative shadow-sm min-h-[240px]">
+
+                  <div>
+                    <p className="text-sm font-bold text-slate-500">
+                      Job Openings
+                    </p>
+
+                    <p className="mt-2 text-3xl font-black text-slate-900">
+                      1,250+
+                    </p>
+
+                    <p className="mt-1 text-sm font-bold text-purple-600">
+                      Active listings
+                    </p>
                   </div>
-                  <div className="absolute right-6 bottom-20 text-pink-600 opacity-95">
-                    <FileCheck size={50} />
+
+                  <div className="absolute top-35 right-4 text-purple-600">
+                    <Briefcase size={42} />
                   </div>
-                  <button className="text-[14px] font-bold text-indigo-600 hover:underline pt-4 text-left cursor-pointer mt-auto">
+
+                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left">
                     View More
                   </button>
+
+                </div>
+
+                {/* SUB-CARD 5: VISA */}
+                <div className="bg-slate-100 border border-slate-200 rounded-xl p-4 flex flex-col justify-between relative shadow-sm min-h-[180px]">
+
+                  <div>
+                    <p className="text-sm font-bold text-slate-500">
+                      Visa Processing
+                    </p>
+
+                    <p className="mt-2 text-3xl font-black text-slate-900">
+                      75%
+                    </p>
+
+                    <p className="mt-1 text-sm text-slate-500">
+                      Estimated 5-7 days
+                    </p>
+                  </div>
+
+                  <div className="absolute top-35 right-4 text-pink-600">
+                    <FileCheck size={42} />
+                  </div>
+
+                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left">
+                    View More
+                  </button>
+
                 </div>
 
               </div>
 
             </div>
-
           </div>
 
         </div>
