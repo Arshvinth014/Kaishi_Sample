@@ -118,8 +118,9 @@ const BottomSection: React.FC = () => {
                                 ))}
                             </div>
 
-                            {/* Mascot Character Image Overlay (Kai & Shi) */}
-                            <div className="absolute bottom-[-310px] right-[-33px] z-30 pointer-events-none hidden sm:block w-[80px] h-[100px] xl:w-85 xl:h-120">
+                            {/* Overlay Character Image */}
+                            <div
+                                className="absolute bottom-[-310px] right-[-33px] z-30 pointer-events-none hidden sm:block w-[240px] h-[340px] lg:w-[300px] lg:h-[420px] xl:w-[340px] xl:h-[480px] ">
                                 <img
                                     src={CharacterImage}
                                     alt="Kai and Shi Characters"
@@ -193,10 +194,10 @@ const BottomSection: React.FC = () => {
                                         const Icon = srv.icon;
                                         return (
                                             <div key={idx} className="flex flex-col items-center text-center space-y-1 group">
-                                                <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 text-purple-600 flex items-center justify-center shadow-sm group-hover:bg-purple-50 group-hover:text-purple-700 transition-all">
-                                                    <Icon size={16} />
+                                                <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-300 text-purple-600 flex items-center justify-center shadow-sm group-hover:bg-purple-50 group-hover:text-purple-700 transition-all">
+                                                    <Icon size={17} />
                                                 </div>
-                                                <span className="text-[9px] font-bold text-slate-600 tracking-tight leading-tight max-w-[64px]">
+                                                <span className="text-[10px] font-bold text-slate-600 tracking-tight leading-tight max-w-[64px]">
                                                     {srv.label}
                                                 </span>
                                             </div>

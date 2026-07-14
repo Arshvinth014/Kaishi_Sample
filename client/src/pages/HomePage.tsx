@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <HeroSection />
-      <div className="w-full bg-slate-50/50 py-1 pt-[-300px] px-4 sm:px-6 lg:px-0 font-sans text-slate-800 antialiased">
+      <div className="w-full bg-white py-1 pt-[-300px] px-4 sm:px-6 lg:px-0 font-sans text-slate-800 antialiased">
         {/* SEARCH ANYTHING YOU NEED IN JAPAN */}
         <section className="w-full py-3 px-4 md:px-8 relative overflow-hidden flex items-center justify-center min-h-[320px]">
 
@@ -142,7 +142,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* MIDDLE SECTION: TWO-COLUMN LAYOUT (Meet Kai & Shi + AI Chat Assistant) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-1 bg-slate-100 p-6 rounded-3xl font-sans">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-1 bg-white p-6 rounded-3xl font-sans">
 
           {/* LEFT PANEL: MEET KAI & SHI */}
           <div className="lg:col-span-7 bg-white border border-slate-300/80 rounded-[24px] p-6 shadow-md shadow-slate-300 flex flex-col justify-between">
@@ -158,7 +158,7 @@ const HomePage: React.FC = () => {
 
               {/* Profile Card & Action Button Area */}
               <div className="md:col-span-5 flex flex-col justify-between space-y-4">
-                <div className="bg-slate-100 border border-slate-300 p-4 rounded-2xl h-full flex flex-col justify-center shadow-sm">
+                <div className="bg-white border border-slate-300 p-4 rounded-2xl h-full flex flex-col justify-center shadow-sm">
                   <div className="flex items-center gap-3 mb-3">
                     <img
                       src={Profile}
@@ -271,64 +271,91 @@ const HomePage: React.FC = () => {
         </div>
 
         {/* BOTTOM SECTION: PLATFORM DESCRIPTION & METRICS INFOGRAPHIC */}
-        <div className="w-full bg-slate-50 p-6 rounded-3xl space-y-6 font-sans text-slate-800 antialiased selection:bg-indigo-100">
+        <div className="w-full bg-white p-6 rounded-3xl space-y-6 font-sans text-slate-800 antialiased selection:bg-indigo-100">
 
-          {/* TOP HEADER HERO BANNER SECTION*/}
-          <div className="w-full bg-white border border-slate-300/80 rounded-2xl p-2 relative overflow-hidden shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4 min-h-[160px]">
+          {/* TOP HEADER HERO BANNER SECTION */}
+          <div className="relative overflow-hidden rounded-2xl border border-slate-300/80 bg-white p-5 md:p-7 shadow-sm min-h-[240px]">
+            <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-10 relative z-10">
 
-            {/* Left Side Content Area: Globe & Core Platform Intros */}
-            <div className="flex items-center gap-5 max-w-xl z-10">
-              {/* Globe Image Slot Shell */}
-              <div className="w-20 h-20 md:w-70 md:h-70 shrink-0 rounded-full bg-indigo-50/60 flex items-center justify-center p-1 border border-indigo-100 shadow-sm">
-                <GlobeSection />
+              {/* Left Side Content Area: Globe & Core Platform Intros */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 flex-1">
+
+                {/* Globe Image Slot Shell */}
+                <div className="w-52 h-52 sm:w-60 sm:h-60 lg:w-72 lg:h-72 shrink-0 rounded-full bg-indigo-50/60 border border-indigo-100 shadow-sm flex items-center justify-center p-2">
+                  <GlobeSection />
+                </div>
+                {/* Main Titles Descriptor */}
+                <div className="flex-1 max-w-xl text-center sm:text-left space-y-3">
+
+                  <h2 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900 leading-tight">
+                    What is{" "}
+                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                      Kaishi Nihon?
+                    </span>
+                  </h2>
+
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+                    Revolutionary Japan Migration Platform
+                  </p>
+
+                  <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-lg">
+                    A one-stop platform that connects you to every service you need to
+                    study, work, live, and thrive in Japan.
+                  </p>
+
+                  <button className="inline-flex items-center gap-2 pt-2 text-sm font-bold text-purple-600 transition-colors hover:text-purple-700 cursor-pointer">
+                    Learn More
+                    <span>➜</span>
+                  </button>
+
+                </div>
               </div>
 
-              {/* Main Titles Descriptor */}
-              <div className="space-y-6">
-                <h2 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight">
-                  What is <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Kaishi Nihon?</span>
-                </h2>
-                <p className="text-xs font-bold text-indigo-600 tracking-wide uppercase">
-                  Revolutionary Japan Migration Platform
-                </p>
-                <p className="text-xs md:text-sm text-slate-500 font-medium leading-relaxed max-w-md">
-                  A one-stop platform that connects you to every service you need to study, work, live, and thrive in Japan.
-                </p>
-                <button className="text-xs font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-1 cursor-pointer pt-1">
-                  Learn More <span className="text-[10px]">➔</span>
-                </button>
-              </div>
-            </div>
+              {/* Center-Right Side Content Block: Platform Vital Performance Stats */}
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-10 xl:pr-28">
 
-            {/* Center-Right Side Content Block: Platform Vital Performance Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-10 xl:gap-12 z-10 lg:pr-40 xl:pr-48">
-              {STATS_ITEMS.map((stat, idx) => {
-                const Icon = stat.icon;
-                return (
-                  <div key={idx} className="space-y-0.5">
-                    <div className="flex items-center gap-1.5">
-                      <Icon size={20} className={stat.iconColor} strokeWidth={2.5} />
-                      <span className="text-xl md:text-2xl font-black text-slate-1000 tracking-tight">
-                        {stat.value}
-                      </span>
+                {STATS_ITEMS.map((stat, idx) => {
+                  const Icon = stat.icon;
+
+                  return (
+                    <div
+                      key={idx}
+                      className="rounded-xl bg-white/70 backdrop-blur-sm p-3 transition-all hover:shadow-md"
+                    >
+                      <div className="flex items-center gap-2">
+                        <Icon
+                          size={22}
+                          className={stat.iconColor}
+                          strokeWidth={2.5}
+                        />
+
+                        <span className="text-2xl font-black tracking-tight text-slate-900">
+                          {stat.value}
+                        </span>
+                      </div>
+
+                      <p className="mt-2 text-xs font-bold tracking-wide text-slate-600">
+                        {stat.label}
+                      </p>
                     </div>
-                    <p className="text-[12px] font-bold text-slate-700 tracking-tight whitespace-nowrap">
-                      {stat.label}
-                    </p>
-                  </div>
-                );
-              })}
+                  );
+                })}
+
+              </div>
+
             </div>
 
             {/* Absolute Floating Right Decorative Asset Slot */}
-            <div className="absolute right-0 top-0 bottom-0 w-150 md:w-220 pointer-events-none z-0 select-none opacity-90">
+            <div className="absolute right-0 top-0 bottom-0 w-[260px] md:w-[380px] lg:w-[900px] pointer-events-none select-none opacity-90 z-0">
               <img
                 src={FlowerBranch}
                 alt="Sakura Branch Decoration Accent"
                 className="w-full h-full object-contain object-right"
                 style={{
-                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, white 90%)',
-                  maskImage: 'linear-gradient(to right, transparent 0%, white 80%)',
+                  WebkitMaskImage:
+                    "linear-gradient(to right, transparent 0%, white 90%)",
+                  maskImage:
+                    "linear-gradient(to right, transparent 0%, white 80%)",
                 }}
               />
             </div>
