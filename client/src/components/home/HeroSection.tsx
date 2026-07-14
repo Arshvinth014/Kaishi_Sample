@@ -6,16 +6,17 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative w-full overflow-hidden bg-slate-900 font-sans antialiased selection:bg-pink-500 selection:text-white">
       {/* 1. Base Structural Background Image Layer */}
-      <div className="relative mx-auto max-w-[1920px] w-full lg:aspect-[1920/820] flex flex-col py-8 px-4 sm:px-6 md:px-8 lg:p-0">
-        <img 
-          src={heroImage} 
-          alt="Japan Journey Background" 
-          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
-        />
+      <div className="relative mx-auto w-full max-w-[1920px] flex flex-col overflow-hidden bg-gradient-to-br from-white via-slate-50 to-indigo-50 py-8 px-4 sm:px-6 md:px-8 lg:bg-transparent lg:p-0 lg:aspect-[1920/820]">
 
+        {/* Desktop Background Image */}
+        <img
+          src={heroImage}
+          alt="Japan Journey Background"
+          className="hidden lg:block absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+        />
         {/* 2. Content Overlay Layer */}
         <div className="relative lg:absolute lg:inset-0 w-full h-full flex flex-col lg:grid lg:grid-cols-12 px-0 lg:px-[5%] lg:py-[4%] gap-8 lg:gap-0 z-10">
-          
+
           {/* LEFT CONTENT COLUMN */}
           <div className="w-full lg:col-span-4 flex flex-col justify-center z-10 text-slate-800">
             {/* Primary Catchphrase */}
@@ -98,7 +99,7 @@ const HeroSection: React.FC = () => {
 
           {/* GRID DATA BOXES CONTAINER */}
           <div className="w-full sm:max-w-xl lg:max-w-none mx-auto lg:mx-0 lg:absolute lg:top-[7%] lg:left-[53%] lg:w-[24%] lg:h-[65%] grid grid-cols-2 lg:grid-rows-3 gap-3 sm:gap-4 lg:gap-x-4 lg:gap-y-3 p-0 lg:p-3 text-slate-900">
-            
+
             {/* Box 1: Flights Data */}
             <div className="flex flex-col justify-between p-4 lg:p-0 lg:py-1.5 lg:pl-4 lg:pt-4 bg-white/70 lg:bg-transparent rounded-2xl lg:rounded-none shadow-sm lg:shadow-none border border-white/40 lg:border-none backdrop-blur-sm lg:backdrop-blur-none min-h-[110px] lg:min-h-0">
               <div>
