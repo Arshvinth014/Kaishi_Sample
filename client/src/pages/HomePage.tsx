@@ -430,7 +430,7 @@ const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="absolute top-35 right-4 text-amber-500 opacity-90">
+                  <div className="absolute top-30 right-4 text-amber-500 opacity-90">
                     <CloudSun size={48} strokeWidth={1.6} />
                   </div>
 
@@ -481,7 +481,7 @@ const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="absolute top-35 right-4 text-indigo-600">
+                  <div className="absolute top-30 right-4 text-indigo-600">
                     <PlaneTakeoff size={42} />
                   </div>
 
@@ -508,7 +508,7 @@ const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="absolute top-35 right-4 text-purple-600">
+                  <div className="absolute top-30 right-4 text-purple-600">
                     <Briefcase size={42} />
                   </div>
 
@@ -535,7 +535,7 @@ const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="absolute top-35 right-4 text-pink-600">
+                  <div className="absolute top-30 right-4 text-pink-600">
                     <FileCheck size={42} />
                   </div>
 
