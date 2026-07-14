@@ -430,11 +430,12 @@ const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="absolute top-[155px] right-4 text-amber-500 opacity-90">
+                  {/* Fixed: Positioned relative to bottom instead of absolute pixel top */}
+                  <div className="absolute bottom-4 right-4 text-amber-500 opacity-90">
                     <CloudSun size={48} strokeWidth={1.6} />
                   </div>
 
-                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left">
+                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left z-10">
                     View More
                   </button>
 
@@ -481,11 +482,12 @@ const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="absolute top-[155px] right-4 text-indigo-600">
+                  {/* Fixed: Positioned relative to bottom instead of absolute pixel top */}
+                  <div className="absolute bottom-4 right-4 text-indigo-600">
                     <PlaneTakeoff size={42} />
                   </div>
 
-                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left">
+                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left z-10">
                     View More
                   </button>
 
@@ -508,11 +510,12 @@ const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="absolute top-[155px] right-4 text-purple-600">
+                  {/* Fixed: Positioned relative to bottom instead of absolute pixel top */}
+                  <div className="absolute bottom-4 right-4 text-purple-600">
                     <Briefcase size={42} />
                   </div>
 
-                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left">
+                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left z-10">
                     View More
                   </button>
 
@@ -535,11 +538,12 @@ const HomePage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="absolute top-[155px] right-4 text-pink-600">
+                  {/* Fixed: Positioned relative to bottom instead of absolute pixel top */}
+                  <div className="absolute bottom-4 right-4 text-pink-600">
                     <FileCheck size={42} />
                   </div>
 
-                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left">
+                  <button className="mt-8 text-sm font-bold text-indigo-600 hover:underline text-left z-10">
                     View More
                   </button>
 
