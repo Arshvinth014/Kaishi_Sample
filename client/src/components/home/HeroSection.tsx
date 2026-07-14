@@ -117,12 +117,34 @@ const HeroSection: React.FC = () => {
             {/* Box 2: Visa Status Data */}
             <div className="flex flex-col justify-between p-4 lg:p-0 lg:py-2 lg:pl-4 lg:pt-4 lg:pr-4 relative bg-white/70 lg:bg-transparent rounded-2xl lg:rounded-none shadow-sm lg:shadow-none border border-white/40 lg:border-none backdrop-blur-sm lg:backdrop-blur-none min-h-[110px] lg:min-h-0">
               <div>
-                <span className="text-[9px] font-extrabold tracking-wide text-slate-900 uppercase block">Visa Status</span>
-                <span className="text-[11px] font-semibold text-slate-900 block mt-2 lg:mt-4">Student Visa</span>
-                <span className="text-[12px] font-semibold text-amber-600 block mt-1 lg:mt-2">Processing</span>
+                <span className="text-[9px] font-extrabold tracking-wide text-slate-900 uppercase block">
+                  Visa Status
+                </span>
+                <span className="text-[11px] font-semibold text-slate-900 block mt-2 lg:mt-4">
+                  Student Visa
+                </span>
+                <span className="text-[12px] font-semibold text-amber-600 block mt-1 lg:mt-2">
+                  Processing
+                </span>
               </div>
-              <div className="absolute right-4 bottom-4 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 w-10 h-10 flex items-center justify-center text-[10px] font-bold text-slate-800 bg-slate-200/60 lg:bg-transparent rounded-full">
-                75%
+
+              {/* Small Pie / Donut Chart */}
+              <div className="absolute right-4 bottom-4 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 w-10 h-10 flex items-center justify-center">
+                <svg
+                  className="absolute inset-0 w-full h-full -rotate-90"
+                  viewBox="0 0 36 36"
+                >
+                  {/* Background Ring */}
+                  <circle cx="18" cy="18" r="15.5" fill="none" stroke="rgba(148,163,184,0.25)" strokeWidth="3" />
+
+                  {/* Progress Ring (75%) */}
+                  <circle cx="18" cy="18" r="15.5" fill="none" stroke="#F59E0B" strokeWidth="3" strokeLinecap="round" strokeDasharray="73 100" />
+                </svg>
+
+                {/* Percentage */}
+                <span className="relative z-10 text-[9px] font-bold text-slate-800">
+                  75%
+                </span>
               </div>
             </div>
 
