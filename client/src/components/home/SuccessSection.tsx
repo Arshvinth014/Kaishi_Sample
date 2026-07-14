@@ -136,84 +136,102 @@ const SuccessSection: React.FC = () => {
                     </div>
 
                 </div>
-
                 {/* BOTTOM SECTION: CHAT LAYOUT FRAME OVER SINGLE BACKGROUND */}
-                <div className="relative w-full min-h-[220px] flex flex-col justify-between font-sans antialiased overflow-visible">
+                <div className="relative w-full min-h-[260px] flex flex-col justify-between overflow-hidden py-4">
 
-                    {/* BACKGROUND GRAPHIC ASSETS LAYERS (Positioned behind content) */}
-                    <div className="absolute left-[-40px] bottom-1 w-60 md:w-52 pointer-events-none z-0 select-none opacity-90">
+                    {/* LEFT BACKGROUND DECORATION */}
+                    <div className="absolute left-[-50px] bottom-0 w-48 md:w-64 lg:w-72 pointer-events-none opacity-60 z-0">
                         <img
                             src={FlowerFall}
                             alt="Left Decorative Background Accent"
                             className="w-full h-full object-contain object-left"
                             style={{
-                                WebkitMaskImage: 'linear-gradient(to left, transparent 0%, white 10%)',
-                                maskImage: 'linear-gradient(to left, transparent 0%, white 10%)',
+                                WebkitMaskImage: "linear-gradient(to left, transparent 0%, white 15%)",
+                                maskImage: "linear-gradient(to left, transparent 0%, white 15%)",
                             }}
                         />
                     </div>
 
-                    {/* Right Corner Background Asset Slot */}
-                    <div className="absolute right-[-30px] top-0 bottom-2 w-44 md:w-100 pointer-events-none z-0 select-none opacity-90">
+                    {/* RIGHT BACKGROUND DECORATION */}
+                    <div className="absolute right-[-20px] bottom-0 w-[240px] md:w-[380px] lg:w-[520px] pointer-events-none opacity-70 z-0">
                         <img
                             src={Building}
                             alt="Right Decorative Background Accent"
                             className="w-full h-full object-contain object-right"
                             style={{
-                                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, white 90%)',
-                                maskImage: 'linear-gradient(to right, transparent 0%, white 80%)',
+                                WebkitMaskImage: "linear-gradient(to right, transparent 0%, white 90%)",
+                                maskImage: "linear-gradient(to right, transparent 0%, white 80%)",
                             }}
                         />
                     </div>
 
-                    {/* CONVERSATIONAL DIALOGUES GRID (Brought forward with z-10) */}
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-5 items-center w-full relative z-10 my-auto py-2">
-                        {CHAT_EXCHANGES.map((chat, idx) => (
-                            <div key={chat.id} className="flex items-start gap-2 w-full max-w-md mx-auto lg:max-w-none">
+                    {/* CHAT GRID */}
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-10 items-start">
 
-                                {/* Left Column Unit: Large Avatar + Sub-positioned Character Name */}
-                                <div className="flex flex-col items-center shrink-0 space-y-2 min-w-[50px]">
-                                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full p-[2px] bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-md">
+                        {CHAT_EXCHANGES.map((chat, idx) => (
+
+                            <div
+                                key={chat.id}
+                                className="flex gap-4 bg-white/60 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-slate-200"
+                            >
+
+                                {/* Avatar */}
+                                <div className="flex flex-col items-center shrink-0">
+
+                                    <div className="w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 shadow-md">
+
                                         <img
                                             src={profileImages[idx % profileImages.length]}
                                             alt={chat.character}
-                                            className="w-full h-full object-cover rounded-full bg-white p-0.5"
+                                            className="w-full h-full rounded-full object-cover bg-white p-0.5"
                                         />
+
                                     </div>
-                                    <span className="text-xs font-black tracking-wide bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+
+                                    <span className="mt-2 text-xs font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                                         {chat.character}
                                     </span>
+
                                 </div>
 
-                                {/* Right Column Unit: Stacked Dialogues */}
-                                <div className="flex-1 space-y-2.5 pt-1">
+                                {/* Chat */}
+                                <div className="flex-1 space-y-3">
 
-                                    {/* Question Pill Bubble Layout */}
-                                    <div className="bg-white border border-slate-300/80 shadow-sm rounded-full px-4 py-2 text-xs md:text-sm font-bold text-slate-800 inline-block tracking-tight">
+                                    <div className="inline-block rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm">
                                         {chat.question}
                                     </div>
 
-                                    {/* Premium Contrast Response Block */}
-                                    <div className="bg-slate-900 border border-slate-800 text-slate-300 rounded-2xl rounded-tl-sm px-4 py-3 shadow-md text-xs font-medium leading-relaxed relative pr-8">
-                                        <p className="tracking-tight">{chat.answer}</p>
+                                    <div className="relative rounded-2xl rounded-tl-sm bg-slate-900 px-4 py-4 pr-10 shadow-lg">
 
-                                        {/* Success Verification Delivery Checkmark Accent */}
-                                        <div className="absolute bottom-2.5 right-3 w-4 h-4 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center shadow-inner">
-                                            <Check size={9} strokeWidth={3.5} />
+                                        <p className="text-sm leading-6 text-slate-300">
+                                            {chat.answer}
+                                        </p>
+
+                                        <div className="absolute bottom-3 right-3 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/20">
+                                            <Check
+                                                size={11}
+                                                strokeWidth={3}
+                                                className="text-emerald-400"
+                                            />
                                         </div>
+
                                     </div>
 
                                 </div>
 
                             </div>
+
                         ))}
+
                     </div>
 
-                    {/* INTERACTIVE ACTION TRIGGER BUTTON */}
-                    <div className="w-full flex justify-center pt-6 relative z-10">
-                        <button className="bg-white hover:bg-slate-300 border border-slate-400/90 text-blue-800 font-extrabold text-xs px-6 py-2.5 rounded-full shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer tracking-tight">
+                    {/* BUTTON */}
+                    <div className="relative z-10 flex justify-center pt-8">
+
+                        <button className="rounded-full border border-slate-300 bg-white px-8 py-3 text-sm font-bold text-indigo-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-md active:scale-95">
                             Ask Another Question
                         </button>
+
                     </div>
 
                 </div>
