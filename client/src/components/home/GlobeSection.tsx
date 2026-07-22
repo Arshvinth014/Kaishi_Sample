@@ -11,7 +11,7 @@ const GlobalServicesGlobeSection: React.FC = () => {
 
   return (
     <section
-      className="relative overflow-hidden bg-gradient-to-b from-white via-violet-50/40 to-sky-50/60 py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden bg-gradient-to-b from-white via-violet-50/40 to-sky-50/60 py-16 sm:py-20 lg:py-5"
       aria-labelledby="global-services-heading"
       data-section="global-services"
     >
